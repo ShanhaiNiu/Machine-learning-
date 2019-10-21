@@ -1,2 +1,2 @@
 # Machine-learning-
-about machine learning  algorithm
+about machine learning  project

@@ -1,6 +1,3 @@
-# 项目：探索泰坦尼克号乘客存活情况
-# 在以迭代方式多次对数据进行探索和设置过滤条件后，构建了一个预测每位泰坦尼克号乘客存活情况的实用算法。此项目运用的技巧是简单机器学习模型*决策树*的手动实现。决策树每次使用一个特征，将数据集拆分为越来越小的群组（称为*节点*）。每次拆分数据子集时，如果生成的子集比之前更同类（包含类似的标签），则预测越来越准确。
-
 # Import libraries necessary for this project
 import numpy as np
 import pandas as pd
@@ -18,10 +15,8 @@ data = full_data.drop('Survived', axis = 1)
 def accuracy_score(truth, pred):  
     # Ensure that the number of predictions matches number of outcomes
     if len(truth) == len(pred): 
-        print((truth == pred).mean())
         # Calculate and return the accuracy as a percent
         return "Predictions have an accuracy of {:.2f}%.".format((truth == pred).mean()*100)
-        print((truth == pred).mean())
     else:
         return "Number of predictions does not match number of outcomes!"  
 # Test the 'accuracy_score' function
